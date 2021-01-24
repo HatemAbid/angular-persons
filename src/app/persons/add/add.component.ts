@@ -19,8 +19,6 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {
   }
   addPerson(formulaire: NgForm): void{
-    // this.personsService.addPerson(formulaire.value);
-    // this.router.navigate(['liste']);
     this.personsService.addPerson(formulaire.value).subscribe(
       (reponse) => {
         const link = ['liste'];
