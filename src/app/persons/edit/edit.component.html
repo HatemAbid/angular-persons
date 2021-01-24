@@ -1,0 +1,25 @@
+<div *ngIf="errorMessage" class="alert alert-danger">
+  {{errorMessage}}
+</div>
+<div class="row container-fluid">
+  <div class="col-md-12">
+    <h4> Edit Person</h4>
+    <form #formulaire="ngForm" *ngIf="person">
+      <div class="form-group">
+        <label class="form-label" for=firstname>First Name</label>
+        <input required id="firstname" type="text" [(ngModel)]="person.firstname" name="firstname" class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for=lastname>Last Name</label>
+        <input required id="lastname" type="text"  [(ngModel)]="person.lastname" name="lastname" class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for=Email>Email Adress</label>
+        <input required id="email" type="email"  [(ngModel)]="person.email" email="true" name="email" class="form-control">
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="button" [disabled]="formulaire.invalid" (click)="savePerson(formulaire)" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
