@@ -16,7 +16,7 @@ export class ListeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.personService.getPersonnes().subscribe(
+    this.personService.getPersons().subscribe(
       (persons) => {
         this.persons = persons;
       },

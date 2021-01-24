@@ -14,7 +14,7 @@ export class PersonsService {
     private http: HttpClient
   ) {}
 
-  getPersonnes(): Observable<Person[]> {
+  getPersons(): Observable<Person[]> {
     return this.http.get<Person []>(this.link);
   }
 
